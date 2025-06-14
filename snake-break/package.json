@@ -1,0 +1,42 @@
+{
+  "name": "snake-break",
+  "displayName": "Snake Break - Game for Waiting",
+  "description": "Play Snake while waiting for AI code generation",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:snake-break.startGame"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "snake-break.startGame",
+        "title": "Start Snake Game",
+        "category": "Snake Break"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "snake-break.startGame",
+        "key": "ctrl+shift+s",
+        "mac": "cmd+shift+s"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/node": "14.x",
+    "typescript": "^4.4.4"
+  }
+}
